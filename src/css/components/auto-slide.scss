@@ -1,0 +1,42 @@
+.auto-slide {
+  //max-width: 2560px;
+  padding: 18px 0;
+  margin: 0 auto;
+
+  &.hyper-x {
+    &-mob{
+      display: none;
+
+      @media (max-width:768px) {
+        display: block;
+      }
+    }
+    .line {
+      background: none;
+
+      svg{
+        margin: 0 10px;
+      }
+    }
+  }
+
+  .line {
+    transform: rotate(-1.11deg);
+    font-family: $druk-wide-bold-italic;
+    background: #ffffff;
+    color: #000000;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 18px 0;
+    white-space: nowrap;
+  }
+
+  .slider{
+    display: flex;
+  }
+
+  .separator{
+    padding: 0 10px;
+  }
+}

@@ -1,0 +1,22 @@
+.sect5{
+  padding: 80px 0 130px;
+
+  @media (max-width: 1366px) {
+    padding: 80px 0;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 80px;
+  }
+
+  .text{
+    background: linear-gradient(94.35deg, #46502D -0.01%, #343135 102.36%);
+
+    @media (max-width: 480px) {
+      max-width: 330px;
+      br{
+        display: none;
+      }
+    }
+  }
+}

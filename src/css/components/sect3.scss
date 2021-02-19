@@ -1,0 +1,27 @@
+.sect3{
+  padding: 125px 0;
+
+  @media (max-width: 1366px) {
+    padding: 80px 0;
+  }
+
+  &:after{
+    right: 0;
+    top: 200px;
+  }
+
+  .circle{
+    position: absolute;
+    top: -45px;
+    right: -60px;
+  }
+
+  .text{
+    background: linear-gradient(94.35deg, #683C83 -0.01%, #814C99 102.36%);
+
+    @media (max-width: 480px) {
+      width: 100%;
+      max-width: 300px;
+    }
+  }
+}

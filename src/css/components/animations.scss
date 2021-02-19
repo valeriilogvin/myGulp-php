@@ -1,0 +1,199 @@
+@keyframes grain {
+
+  0%,
+  to {
+    transform: translate(0)
+  }
+
+  10% {
+    transform: translate(-5%, -10%)
+  }
+
+  20% {
+    transform: translate(-15%, 5%)
+  }
+
+  30% {
+    transform: translate(7%, -25%)
+  }
+
+  40% {
+    transform: translate(-5%, 25%)
+  }
+
+  50% {
+    transform: translate(-15%, 10%)
+  }
+
+  60% {
+    transform: translate(15%)
+  }
+
+  70% {
+    transform: translateY(15%)
+  }
+
+  80% {
+    transform: translate(3%, 35%)
+  }
+
+  90% {
+    transform: translate(-10%, 10%)
+  }
+}
+
+.wrapper{
+  &.play {
+    &:before {
+      animation: grain 8s steps(10) infinite;
+    }
+
+    .sect1 {
+      .tumbler {
+        a {
+          &.play {
+            top: -21px;
+          }
+
+          &.stop {
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &:before {
+    background-image: url(../img/noise.webp);
+    content: "";
+    height: 300%;
+    left: -50%;
+    opacity: .5;
+    position: fixed;
+    top: -100%;
+    width: 300%;
+    pointer-events: none;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1)
+  }
+
+  15%{
+    transform: scale(1.5)
+  }
+
+  30% {
+    transform: scale(1)
+  }
+
+  45%{
+    transform: scale(1.5)
+  }
+
+  60% {
+    transform: scale(1)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.pulse-map-circle{
+  animation: 3s cubic-bezier(0.4, 0.8, 0.4, 0.8) infinite  pulse;
+}
+
+@keyframes pulse-bg {
+  0% {
+    width: 1300px;
+    height: 1300px;
+  }
+
+  15%{
+    width: 1800px;
+    height: 1800px;
+  }
+
+  30% {
+    width: 1300px;
+    height: 1300px;
+  }
+
+  45%{
+    width: 1800px;
+    height: 1800px;
+  }
+
+  60% {
+    width: 1300px;
+    height: 1300px;
+  }
+
+  100% {
+    width: 1300px;
+    height: 1300px;
+  }
+}
+
+.map-bg-pulse{
+  &:before{
+    animation: 3s ease infinite pulse-bg;
+  }
+}
+
+@keyframes jump {
+
+  0% {
+    //top: 115px;
+    transform: translateY(0);
+  }
+
+  15%{
+    transform: translateY(-20px);
+    //top: 95px;
+  }
+
+  30% {
+    //top: 115px;
+    transform: translateY(0);
+
+  }
+
+  45%{
+    //top: 95px;
+    transform: translateY(-20px)
+  }
+
+  60% {
+    //top: 115px;
+    transform: translateY(0);
+
+  }
+
+  100% {
+    transform: translateY(0);
+
+    //top: 115px;
+  }
+
+}
+
+.top-map-marker{
+  animation: 3s cubic-bezier(0.4, 0.8, 0.4, 0.8) infinite jump;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-circle {
+  animation: spin 12s linear 0s infinite;
+}

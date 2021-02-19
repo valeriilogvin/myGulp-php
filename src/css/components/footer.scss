@@ -1,0 +1,26 @@
+footer{
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 70px;
+
+    @media (max-width: 480px) {
+      //flex-direction: column;
+      padding: 30px 25px;
+    }
+  }
+
+  .copyright {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 15px;
+    text-align: right;
+    text-transform: uppercase;
+
+    //@media (max-width: 480px) {
+    //  margin-top: 20px;
+    //}
+  }
+}
